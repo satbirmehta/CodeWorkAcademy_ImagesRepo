@@ -1,0 +1,40 @@
+
+Cloudinary:
+https://github.com/creativetimofficial/paper-dashboard/tree/master/assets
+
+
+
+https://spring.io/guides/gs/handling-form-submission/
+
+https://spring.io/guides/gs/handling-form-submission/
+
+
+http://jvmhub.com/2015/08/02/spring-boot-with-thymeleaf-tutorial-part-2-forms-with-validation/
+
+
+
+https://docs.spring.io/spring-security/site/docs/3.2.0.RELEASE/guides/form.html
+
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/   : REPOSITORY METHODS
+
+
+THYMELEAF
+http://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html
+
+
+
+Week six chall: Security : SSUserDeatilService
+http://www.ekiras.com/2016/04/authenticate-user-with-custom-user-details-service-in-spring-security.html
+
+
+https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku  : 
+w6_link prj : https://my-heroku-linkedin.herokuapp.com/
+
+login form validation and security:
+https://medium.com/@gustavo.ponce.ch/spring-boot-spring-mvc-spring-security-mysql-a5d8545d837d
+
+
+
+
+Data Valdation : login form
+https://hellokoding.com/registration-and-login-example-with-spring-security-spring-boot-spring-data-jpa-hsql-jsp/

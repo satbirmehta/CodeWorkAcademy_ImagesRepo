@@ -1,0 +1,102 @@
+
+<!-- https://stackoverflow.com/questions/34406053/css-set-bootstrap-item-active -->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:fragment="header">
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png"/>
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>ATM Application</title>
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+    <link href="bootstrap3/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/gsdk.css" rel="stylesheet"/>
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href='https://fonts.googleapis.com/css?family=Grand+Hotel|Open+Sans:400,300' rel='stylesheet' type='text/css'/>
+    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" th:fragment="nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">ATM Application</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li id="home" ><a href="/">Home</a></li>
+                <li id="deposit"><a href="/deposit">Deposit</a></li>
+                <li id="withdraw"><a href="/withdraw">Withdraw</a></li>
+                <li id="hist"><a href="/transactions">Transaction History</a></li>
+
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li> <button class="btn btn-primary "><a class="text-white" href="/logout">Logout
+                    <span class="sr-only">(current)</span></a></button></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+
+</body>
+<th:block th:fragment="foot">
+    <!--  jQuery and Bootstrap core files    -->
+    <script src="assets/js/jquery.js" type="text/javascript"></script>
+    <script src="assets/js/jquery-ui.custom.min.js" type="text/javascript"></script>
+
+    <script src="bootstrap3/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <!--  Plugins -->
+    <script src="assets/js/gsdk-checkbox.js"></script>
+    <script src="assets/js/gsdk-morphing.js"></script>
+    <script src="assets/js/gsdk-radio.js"></script>
+    <script src="assets/js/gsdk-bootstrapswitch.js"></script>
+    <script src="assets/js/bootstrap-select.js"></script>
+    <script src="assets/js/bootstrap-datepicker.js"></script>
+    <script src="assets/js/chartist.min.js"></script>
+    <script src="assets/js/jquery.tagsinput.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+
+    <!--  Get Shit Done Kit PRO Core javascript 	 -->
+    <script src="assets/js/get-shit-done.js"></script>
+
+
+    <!-- If you are using TypeKit.com uncomment this code otherwise you can delete it -->
+    <!--
+    <script src="https://use.typekit.net/[your kit code here].js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    -->
+
+    <!-- If you have retina @2x images on your server which can be sent to iPhone/iPad/MacRetina, please uncomment the next line, otherwise you can delete it -->
+    <!-- <script src="assets/js/retina.min.js"></script> -->
+
+</th:block>
+<script>
+    var home = document.getElementById("home");
+    var deposit =document.getElementById("deposit");
+    var withdraw =document.getElementById("withdraw");
+    var hist =document.getElementById("hist");
+    home.className+="active";
+    deposit.className+="";
+    withdraw.className+="";
+    hist.className+="";
+</script>
+</html>

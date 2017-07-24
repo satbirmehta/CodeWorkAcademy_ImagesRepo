@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org " xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:include=" base::header">
+
+    <title>Login</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="sidebar" data-background-color="brown" data-active-color="danger" th:replace="base::sidebar">
+
+    </div>
+    <div class="main-panel">
+        <nav class="navbar navbar-default" th:replace="base::navbar">
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1">
+
+                    </div>
+                    <div class="col-md-7">
+                        <br/>
+                        <h2>Add a Work Experience</h2>
+                        <form action="#" th:action="@{/addSkill}" th:object="${skill}" method="post" id="skillForm">
+
+
+                            <div class="form-group">
+                                <label for="skillName">Enter a Skill (e.g. Data Analysis, Java):</label>
+                                <input type="text" class="form-control" th:field="*{skillName}" id="skillName" placeholder="Java"/>
+                                <span class="text-danger" th:if="${#fields.hasErrors('skillName')}" th:errors="*{skillName}">skillName Error</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="skillRating">Enter Approximate Rating for Skill:</label>
+                                <input type="text" class="form-control" th:field="*{skillRating}" id="skillRating" placeholder="familiar/intermediate/proficient/expert"/>
+                                <span class="text-danger" th:if="${#fields.hasErrors('skillRating')}" th:errors="*{skillRating}">skillRating Error</span>
+                            </div>
+                            <div class="form-group">
+
+                                <input type="hidden" class="form-control"  th:field="*{postingId}" id="postingId" placeholder="id"/>
+
+                            </div>
+
+
+
+                            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer" th:fragment="base::footer">
+        </footer>
+    </div>
+</div>
+</body>
+<th:block th:replace="base::scripts">
+</th:block>
+</html>

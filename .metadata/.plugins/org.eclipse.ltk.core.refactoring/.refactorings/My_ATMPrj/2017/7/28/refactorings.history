@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;bootstrap334&apos; to &apos;static&apos;&#x0D;&#x0A;- Original project: &apos;My_ATMPrj&apos;&#x0D;&#x0A;- Destination element: &apos;static&apos;&#x0D;&#x0A;- Original element: &apos;bootstrap334&apos;" description="Copy folder" element1="src/main/resources/static/bootstrap334" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1499775164544" target="/W6_LinkedinSpringPrj/src/main/resources/static" units="0" version="1.0"/>
+</session>

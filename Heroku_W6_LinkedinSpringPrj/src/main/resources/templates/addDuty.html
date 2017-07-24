@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org " xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:include=" base::header">
+
+    <title>Login</title>
+</head>
+<body>
+<div class="wrapper">
+    <div class="sidebar" data-background-color="brown" data-active-color="danger" th:replace="base::sidebar">
+
+    </div>
+    <div class="main-panel">
+        <nav class="navbar navbar-default" th:replace="base::navbar">
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1">
+
+                    </div>
+                    <div class="col-md-7">
+                        <br/>
+                        <h2>Add a Work Experience</h2>
+                        <br/>
+                        <h3>Add Duties below.  Hit submit after each duty is complete.  When you are finished adding Duties, click next</h3>
+                        <form action="#" th:action="@{/resume/addDuty}" th:object="${duty}" method="post" id="dutyForm">
+
+
+                            <div class="form-group">
+                                <label for="dutyMessage">Enter a Duty for the Job</label>
+                                <input type="text" class="form-control" th:field="*{dutyMessage}" id="dutyMessage" placeholder="Data Analysis"/>
+                                <span class="text-danger" th:if="${#fields.hasErrors('dutyMessage')}" th:errors="*{dutyMessage}">dutyMessage Error</span>
+                            </div>
+                            <div class="form-group">
+
+                                <input type="hidden" class="form-control" th:field="*{jobId}" id="jobId" placeholder="Java"/>
+
+                            </div>
+
+                            <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+                        </form>
+                    </div>
+                    <div class="col-md-3">
+
+                    </div>
+
+                </div>
+                <div class="row">
+                   <a class="btn btn-primary  btn-fill" href="/resume/addJob"> Next </a>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="footer" th:fragment="base::footer">
+        </footer>
+    </div>
+</div>
+</body>
+<th:block th:replace="base::scripts">
+</th:block>
+</html>

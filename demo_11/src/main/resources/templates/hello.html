@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot and Form example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h3>Spring Boot Form, part 2 - forms</h3>
+	<form action="#" th:action="@{/greeting}" th:object="${Greeting}" method="post">
+		<table>
+			<tr>
+				<td>Enter Id:</td>
+				<td><input type="text" th:field="*{id}" /></td>
+				
+			</tr>
+			<tr>
+				<td>Content:</td>
+				<td><input type="text" th:field="*{content}" /></td>
+				
+			</tr>
+			<tr>
+				<td><button type="submit" value = "Submit">Submit post</button></td>
+				<td><button type="reset" value = "Reset">reset post</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+

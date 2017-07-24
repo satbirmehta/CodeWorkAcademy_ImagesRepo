@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<!-- press submit button and it calls addFood method of controller -->
+<form th:action="@{/addFood}" th:object="${personFood}"  method="post">  
+
+    <div><label> Name: <input type="text" th:field="*{name}"/> </label></div>
+ <!--    <h3 th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</h3>  -->
+    
+    <div><label> Food: <input type="text" th:field="*{food}"/> </label></div>
+  <!-- <h4 th:if="${#fields.hasErrors('food')}" th:errors="*{food}">food shud bw 2 nd 30 Error</h4> -->
+    
+    
+    <div><input type="submit" value="Add"/></div>
+    
+    
+</form>
+
+
+
+<form th:action="@{/printList}" method="post">
+    <div><input type="submit" value="See Current Food"/></div>
+</form>
+</body>
+</html>

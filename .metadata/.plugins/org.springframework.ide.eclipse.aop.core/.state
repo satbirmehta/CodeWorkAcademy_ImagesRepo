@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="My_SecurityLoginPrj"/>
+<aop-project name="RedditPrj"/>
+<aop-project name="Heroku_W6_LinkedinSpringPrj"/>
+<aop-project name="My_ATMPrj"/>
+<aop-project name="InstapopzPrj1"/>
+<aop-project name="demo_1"/>
+<aop-project name="W6_LinkedinSpringPrj"/>
+<aop-project name="W6_HerokuLinkPrj"/>
+<aop-project name="demo_11"/>
+<aop-project name="ATMPrj"/>
+<aop-project name="oriongram"/>
+<aop-project name="demo"/>
+<aop-project name="My_SecureEx_Prj"/>
+<aop-project name="W6_NewLinkPrj"/>
+<aop-project name="PotluckPrj"/>
+</aop-reference-model>

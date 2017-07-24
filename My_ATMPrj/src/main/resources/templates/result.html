@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+
+<head th:replace="home::header">
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" th:replace="home::nav">
+</nav>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="wrapper">
+    <div class="section">
+        <div class="container">
+            <h1>Result</h1>
+
+            <p th:text="'Account: ' + ${transaction.acctNum}" >Account Number</p>
+            <p th:text="'Action: ' + ${transaction.action}"> Transaction Action</p>
+            <p th:text="'Amount: ' + ${transaction.amt}" > Transaction Amount</p>
+        </div>
+    </div>
+</div>
+</body>
+<th:block th:replace="home::foot">
+</th:block>
+</html>

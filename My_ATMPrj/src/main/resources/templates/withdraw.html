@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head th:replace="home::header">
+
+</head>
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top" th:replace="home::nav">
+</nav>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="wrapper">
+    <div class="section">
+        <div class="container">
+
+            <form action="#" th:action="@{/withdraw}" th:object="${transaction}" method="post" id="withdrawForm">
+
+                <div class="form-group">
+                    <label for="select">Select Account Number:</label>
+                    <br/>
+                    <select name="huge" class="selectpicker" data-style="btn-info btn-fill btn-block" form="withdrawForm" th:field="*{acctNum}" id="select">
+                        <!--<option disabled selected> Choose city</option>-->
+                        <th:block th:each="acct:${acctList}">
+                            <option th:value="${acct.acctNum}" th:text="${{acct.acctNum}}">account# </option>
+                        </th:block>
+
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="amt">Enter Amount to Withdraw</label>
+                    <input type="text" class="form-control" th:field="*{amt}" id="amt" placeholder="Amount"/>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Enter Reason for Transaction</label>
+                    <input type="text" class="form-control" th:field="*{reason}" id="reason" placeholder="Reason"/>
+                </div>
+
+                <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+            </form>
+        </div>
+    </div>
+
+</div>
+</body>
+<th:block th:replace="home::foot">
+</th:block>
+<script>
+    var home = document.getElementById("home");
+    var deposit =document.getElementById("deposit");
+    var withdraw =document.getElementById("withdraw");
+    var hist =document.getElementById("hist");
+    home.className+="";
+    deposit.className+="";
+    withdraw.className+="active";
+    hist.className+="";
+</script>
+</html>

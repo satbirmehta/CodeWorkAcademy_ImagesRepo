@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org " xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head th:include=" base::header">
+
+    <title>Results</title>
+</head>
+<body>
+<div class="wrapper">
+
+    <div class="sidebar" data-background-color="brown" data-active-color="danger" th:replace="base::sidebar">
+
+    </div>
+    <div class="main-panel">
+        <nav class="navbar navbar-default" th:replace="base::navbar">
+        </nav>
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <table class="table table-striped">
+                        <div th:if="${searchList!=null}">
+                            <thead>
+                            <tr >
+
+                                <td >ID #</td>
+                                <td >First Name</td>
+                                <td >Last Name</td>
+                                <td >User Name</td>
+                                <td >Email</td>
+                            </tr>
+                            </thead>
+                        </div>
+                        <div th:if="${searchList2!=null}">
+                            <thead>
+                            <tr>
+                                <th>ID #</th>
+                                <th>Employer</th>
+                                <th>Title</th>
+                                <th>Salary Range</th>
+                                <th>Description</th>
+                                <th>Skills</th>
+
+                            </tr>
+                            </thead>
+                        </div>
+
+
+
+
+                        <div th:if="${searchList!=null}">
+                            <tbody>
+                            <tr th:each="search :${searchList}">
+                                <td th:text="${{search.id}}"></td>
+                                <td th:text="${{search.firstName}}"></td>
+                                <td th:text="${{search.lastName}}"></td>
+                                <td th:text="${{search.username}}"></td>
+                                <td th:text="${{search.email}}"></td>
+
+
+                            </tr>
+                            </tbody>
+
+                        </div>
+                        <div th:if="${searchList2!=null}">
+                            <tbody>
+                            <tr th:each="notif:${searchList2}">
+                                <td th:text="${{notif.id}}">
+                                    Number
+                                </td>
+                                <td th:text="${{notif.employer}}">
+                                    Employer
+                                </td>
+                                <td th:text="${{notif.title}}">
+                                    Title
+                                </td>
+                                <td th:text="${ '$'+{notif.minSalary}+' - $'+{notif.maxSalary} }">
+                                    Salary Range
+                                </td>
+                                <td th:text="${{notif.description}}">
+                                    Description
+                                </td>
+                                <td th:text="${{notif.skills}}">
+                                    Skills
+                                </td>
+                            </tr>
+                            </tbody>
+                        </div>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <footer class="footer" th:fragment="base::footer">
+        </footer>
+
+    </div>
+
+</div>
+</body>
+<th:block th:replace="base::scripts">
+</th:block>
+
+</html>
